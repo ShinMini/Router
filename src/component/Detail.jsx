@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import { useParams, useNavigate } from 'react-router-dom';
+import { getContents, deleteContentsById } from '../Data/DetailsData';
 
 export default function Detail() {
    let navigate = useNavigate();

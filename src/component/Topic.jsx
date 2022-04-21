@@ -1,5 +1,5 @@
 import React from 'react';
-import contents from '../Data/Topic_Data';
+import contents from '../Data/DetailsData';
 import { useParams } from 'react-router-dom';
 
 // 원리: params가 클릭하는 content.id value를 topic_id로 받아온다. 
