@@ -24,20 +24,24 @@ nav.mainNav:hover {
 /* navigation bar에 마우스 포인터 올려놓을 경우, 링크 색상 변화.. */
 
 nav.mainNav div a a {
-   padding-top: .3em;
-   visibility: hidden;
-   font-size: 0em;
+   transform: scale(0);
+   height: 0;
+   transition-timing-function: ease-in-out;
+   transition-duration: 300ms;
+   color: gray;
+   text-shadow: none;
 }
 
-nav.mainNav div a a:nth-child(1) {
-   /* 첫번째 sub menu 는 조금 더 간격 넣어줌 */
-   padding-top: 1em;
-}
 
 /* main menu link */
 div.menu a:hover {
    color: black;
    transform: scale(1.2);
+   text-shadow: 5px 5px 3px rgba(220, 190, 190, .8),
+      -5px 5px 3px rgba(220, 190, 190, .8),
+      -5px -5px 3px rgba(220, 190, 190, .8),
+      5px -5px 3px rgba(220, 190, 190, .8);
+   border-radius: 5px;
 }
 
 .mainNav div.menu {
@@ -48,6 +52,16 @@ div.menu a:hover {
 .mainNav div.menu a {
    display: flex;
    flex-direction: column;
+}
+
+.mainNav div.menu a:hover>a {
+   transform: scale(.8);
+   height: 100%;
+   padding-top: .3em;
+}
+
+.mainNav div.menu a:hover>a:nth-child(1) {
+   padding-top: .8em;
 }
 
 /* user info link  */
