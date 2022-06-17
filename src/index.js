@@ -9,6 +9,7 @@ import Project from './component/Projects/Project';
 import Home from './component/Home';
 import Login from './component/Login';
 
+
 const rootElement = document.getElementById('app');
 ReactDOM.render(
   <BrowserRouter>
@@ -21,7 +22,7 @@ ReactDOM.render(
         <Route path={'projects'} element={<Projects />}>
           <Route path=":id" element={<Project />} />
         </Route>
-        <Route path={'login'} element={<Login/>} />
+        <Route path={'login'} element={<Login />} />
       </Route>
     </Routes>
   </BrowserRouter>,
